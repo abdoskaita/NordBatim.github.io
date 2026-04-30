@@ -21,21 +21,31 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-User-agent: anthropic-ai
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: cohere-ai
+User-agent: claudeBot
 Allow: /
 
 User-agent: Googlebot-Extended
 Allow: /
 
-# Tous les autres robots inconnus
-User-agent: *
+# Bots indésirables (scrapers, spam)
+User-agent: AhrefsBot
 Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Tous les autres
+User-agent: *
+Allow: /
 
 # Sitemap
 Sitemap: https://www.nord-batim.fr/sitemap.xml
