@@ -1,17 +1,13 @@
-# Moteurs de recherche classiques
-User-agent: Googlebot
+# ========================================
+# ROBOTS.TXT — NORD BATIM
+# SEO + IA + Protection Scrapers
+# ========================================
+
+# Autoriser tous les moteurs de recherche
+User-agent: *
 Allow: /
 
-User-agent: Googlebot-Image
-Allow: /assets/
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# LLMs et IA
+# IA utiles (visibilité ChatGPT / Perplexity / Claude)
 User-agent: GPTBot
 Allow: /
 
@@ -21,16 +17,16 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: anthropic-ai
 Allow: /
 
-User-agent: claudeBot
+User-agent: PerplexityBot
 Allow: /
 
 User-agent: Googlebot-Extended
 Allow: /
 
-# Bots indésirables (scrapers, spam)
+# Bloquer les scrapers SEO agressifs
 User-agent: AhrefsBot
 Disallow: /
 
@@ -43,9 +39,4 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Tous les autres
-User-agent: *
-Allow: /
-
-# Sitemap
 Sitemap: https://www.nord-batim.fr/sitemap.xml
