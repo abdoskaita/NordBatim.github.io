@@ -24,12 +24,6 @@
   gtag('js', new Date());
   gtag('config', 'AW-18131774497');
 </script>
-<!-- Event snippet for conversion -->
-<script>
-  gtag('event', 'conversion', {
-    'send_to': 'AW-18131774497/GheaCI7ynqccEKHY88VD'
-  });
-</script>
   <!-- Microsoft Clarity -->
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -483,6 +477,26 @@ function gtag_report_conversion(url) {
   window.addEventListener('scroll', () => {
     document.getElementById('header').style.boxShadow = window.scrollY > 10
       ? '0 4px 30px rgba(0,0,0,0.12)' : '0 2px 20px rgba(0,0,0,0.08)';
+  });
+</script>
+  <!-- Tracking GA4 - WhatsApp, Téléphone -->
+<script>
+  document.querySelectorAll('a[href*="wa.link"], a[href*="whatsapp"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        'event_category': 'contact',
+        'event_label': 'Devis WhatsApp'
+      });
+    });
+  });
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'phone_call', {
+        'event_category': 'contact',
+        'event_label': 'Appel téléphone'
+      });
+    });
   });
 </script>
 </body>
