@@ -479,25 +479,6 @@ function gtag_report_conversion(url) {
       ? '0 4px 30px rgba(0,0,0,0.12)' : '0 2px 20px rgba(0,0,0,0.08)';
   });
 </script>
-  <!-- Tracking GA4 - WhatsApp, Téléphone -->
-<script>
-  document.querySelectorAll('a[href*="wa.link"], a[href*="whatsapp"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'whatsapp_click', {
-        'event_category': 'contact',
-        'event_label': 'Devis WhatsApp'
-      });
-    });
-  });
-
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      gtag('event', 'phone_call', {
-        'event_category': 'contact',
-        'event_label': 'Appel téléphone'
-      });
-    });
-  });
 </script>
 </body>
 </html>
